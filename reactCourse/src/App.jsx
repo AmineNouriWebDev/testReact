@@ -1,24 +1,25 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import MyButton from "./components/MyButton";
-const person = {
-  name: "amine",
-  age: 25,
-  job: "developer",
-};
+import Header from "./components/Header";
+import Article from "./components/Article";
+import Aside from "./components/Aside";
+import "./App.css";
+
 function App() {
-  const elmStyle = {
-    color: "red",
-    backgroundColor: "yellow",
-    fontSize: "30px",
-    textAlign: "center",
-    padding: "20px 0px",
-  };
   return (
     <>
-      <h1 style={elmStyle}>
-        Hello {person.name} you are {person.job} your age is: {person.age}
-      </h1>
-      <MyButton />
+      <Header />
+      <section>
+        <article>
+          <Article />
+          <Article />
+          <Article />
+          <Article />
+        </article>
+
+        <aside>
+          <Aside />
+        </aside>
+      </section>
     </>
   );
 }
