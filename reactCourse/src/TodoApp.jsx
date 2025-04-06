@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "animate.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function TodoApp() {
   const [tasks, setTasks] = useState([]);
