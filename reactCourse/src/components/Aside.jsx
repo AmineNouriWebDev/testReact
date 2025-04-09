@@ -1,21 +1,20 @@
 import "./aside.css";
 import MyButton from "./MyButton";
 const Aside = () => {
-  return (
-    <div className="aside">
-      <MyButton>
-        <p>nom</p>
-        <img src="https://picsum.photos/200/300" alt="Image" />
+  const boutons = [
+    { id: 1, nom: "nom1", img: "https://picsum.photos/200/300" },
+    { id: 2, nom: "nom2", img: "https://picsum.photos/200/300" },
+    { id: 3, nom: "nom3", img: "https://picsum.photos/200/300" },
+  ];
+  const maListeBoutons = boutons.map((button) => {
+    return (
+      <MyButton key={button.id}>
+        <p>{button.nom}</p>
+        <img src={button.img} alt="Image" />
       </MyButton>
-      <MyButton>
-        <a href="#">click me</a>
-      </MyButton>
-      <MyButton>
-        <p>nom</p>
-        <img src="https://picsum.photos/200/300" alt="Image" />
-      </MyButton>
-    </div>
-  );
+    );
+  });
+  return <div className="aside">{maListeBoutons}</div>;
 };
 
 export default Aside;

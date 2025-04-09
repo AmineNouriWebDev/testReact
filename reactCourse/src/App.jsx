@@ -5,19 +5,22 @@ import Aside from "./components/Aside";
 import "./App.css";
 
 function App() {
+  const articles = [
+    { id: 1, titre: "Mon premier titre", contenu: "Mon premier contenu" },
+    { id: 2, titre: "Mon deuxième titre", contenu: "Mon deuxième contenu" },
+    { id: 3, titre: "Mon troisième titre", contenu: "Mon troisième contenu" },
+    { id: 4, titre: "Mon quatrième titre", contenu: "Mon quarième contenu" },
+  ];
+  const maListeArticles = articles.map((article) => {
+    return (
+      <Article key={article.id} nom={article.titre} content={article.contenu} />
+    );
+  });
   return (
     <>
       <Header />
       <section>
-        <article>
-          <Article
-            nom="Academie Tarmeez"
-            content="Academie pour apprendre le développsement"
-          />
-          <Article />
-          <Article />
-          <Article />
-        </article>
+        <article>{maListeArticles}</article>
 
         <aside>
           <Aside />
