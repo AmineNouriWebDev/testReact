@@ -1,11 +1,11 @@
 import "./article.css";
 
-const Aricle = () => {
+const Aricle = ({ nom = "unnamed", content = "empty" }) => {
   return (
     <div className="article">
-      <h1>This is the post title</h1>
+      <h1>{nom}</h1>
       <hr></hr>
-      <p>This is the post body</p>
+      <p>{content}</p>
     </div>
   );
 };

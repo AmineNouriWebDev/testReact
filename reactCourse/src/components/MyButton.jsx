@@ -1,8 +1,8 @@
 import "./MyButton.css";
-const MyButton = () => {
+const MyButton = ({ children }) => {
   return (
     <>
-      <button>TagButton</button>
+      <button>{children}</button>
     </>
   );
 };

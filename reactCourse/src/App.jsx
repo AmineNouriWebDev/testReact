@@ -10,7 +10,10 @@ function App() {
       <Header />
       <section>
         <article>
-          <Article />
+          <Article
+            nom="Academie Tarmeez"
+            content="Academie pour apprendre le développsement"
+          />
           <Article />
           <Article />
           <Article />
